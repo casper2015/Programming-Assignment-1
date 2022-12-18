@@ -115,15 +115,15 @@ int main(int argc, char** argv)
 		listOfCommands[i] = NULL;
 	}
 
-	int command_number = 0;
+	int commandNumber = 0;
 	while ((lineSize = getline(&line, &lineBuffSize, stdin)) != -1)
 	{
-		listOfCommands[command_number] = malloc(sizeof(char) * (strlen(line) + 1));
+		listOfCommands[commandNumber] = malloc(sizeof(char) * (strlen(line) + 1));
 		strcpy(listOfCommands[command_number], line);
-		command_number++;
+		commandNumber++;
 	}
 
-	for (int j = 0; j < command_number; j++)
+	for (int j = 0; j < commandNumber; j++)
 	{
 		char* command_line;
 		char* token;
