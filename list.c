@@ -11,7 +11,7 @@
 
 #define stdin stdin
 #define INITIAL_SIZE 2
-#define MAX_NUM_OF_CMDS 100
+#define MAXIMUM_NUMBER_OF_COMMANDS 100
 
 // STRUCT DECLARATIONS
 
@@ -107,10 +107,10 @@ int main(int argc, char** argv)
 
 	line = NULL;
 	lineBuffSize = 0;
-	listOfCommands = malloc(sizeof(char*) * MAX_NUM_OF_CMDS);
+	listOfCommands = malloc(sizeof(char*) * MAXIMUM_NUMBER_OF_COMMANDS);
 	myList = initializeList();
 
-	for (int i = 0; i < MAX_NUM_OF_CMDS; i++)
+	for (int i = 0; i < MAXIMUM_NUMBER_OF_COMMANDS; i++)
 	{
 		listOfCommands[i] = NULL;
 	}
