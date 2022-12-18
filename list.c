@@ -23,7 +23,7 @@ typedef struct entry
 	int age;
 } Entry;
 
-typedef struct arrayList 
+typedef struct list 
 {
 	int capacity;
 	int size;
@@ -44,9 +44,9 @@ Entry* initializeEntry(char* name, char* lastname, float height, int age)
 	newEntry -> lastname = malloc(sizeof(char) * (strlen(lastname) + 1));
 	strcpy(newEntry -> lastname, lastname);
 	
-	newEntry->height = height;
+	newEntry -> height = height;
 	
-	newEntry->age = age;
+	newEntry -> age = age;
 	
 	return newEntry;
 }
@@ -56,8 +56,8 @@ void freeEntry(Entry* entry)
 {
 	if (entry != NULL)
 	{
-		free(entry->name);
-		free(entry->lastname);
+		free(entry -> name);
+		free(entry -> lastname);
 		free(entry);
 	}
 }
@@ -86,7 +86,7 @@ void printList(List* myList)
 	{
 		for (int i = 0; i < myList -> size; i++)
 		{
-			printf("[%d]\t%s\t%s\t%0.2f\t%d\n",i,myList->data[i]->name,myList->data[i]->lastname,myList->data[i]->height,myList->data[i]->age);
+			printf("[%d]\t%s\t%s\t%0.2f\t%d\n", i, myList -> data[i] -> name, myList -> data[i] -> lastname, myList -> data[i] -> height, myList -> data[i] -> age);
 		}
 	}
 }
