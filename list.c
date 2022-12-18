@@ -213,7 +213,7 @@ int main(int argc, char** argv)
 		{
 			printList(myList);
 		}
-		else if(strcmp(token, "printListInfo") == 0)
+		else if (strcmp(token, "printListInfo") == 0)
 		{
 			printListInfo(myList);
 		}
